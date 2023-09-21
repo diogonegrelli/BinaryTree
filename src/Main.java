@@ -5,7 +5,7 @@ public class Main {
 
         Tree tree = new Tree();
 
-        Node na = new Node();
+        Node na = new Node(10);
 
 
         }

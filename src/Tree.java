@@ -1,11 +1,11 @@
 public class Tree {
     Node root;
 
-    public int insertValue(int data){
+    public void insertValue(int data){
         if (root == null){
-            Node root = new Node( data; )
+            Node root = new Node(data);
+
         }
-        return data;
     }
 
     public int searchValue(int value){
