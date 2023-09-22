@@ -5,8 +5,9 @@ public class Main {
 
         Tree tree = new Tree();
 
-        Node na = new Node(10);
+        tree.insertValue(10);
 
+        System.out.println(tree.root.getData());
 
         }
 }

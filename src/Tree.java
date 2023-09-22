@@ -1,9 +1,15 @@
 public class Tree {
     Node root;
-
     public void insertValue(int data){
         if (root == null){
-            Node root = new Node(data);
+            root = new Node(data);
+        }
+        else{
+            Node newNode = new Node(data);
+            Node current = root;
+            if (data > root.getData())
+                root.setRight(newNode);
+
 
         }
     }
