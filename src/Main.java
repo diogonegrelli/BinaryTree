@@ -5,9 +5,11 @@ public class Main {
 
         Tree tree = new Tree();
 
-        tree.insertValue(10);
 
+        tree.insertValue(12);
+        tree.insertValue(13);
         System.out.println(tree.root.getData());
-
-        }
+        Node var = tree.root.getRight();
+        System.out.println(var.getData());
+    }
 }
