@@ -7,9 +7,15 @@ public class Main {
 
 
         tree.insertValue(12);
-        tree.insertValue(13);
-        System.out.println(tree.root.getData());
-        Node var = tree.root.getRight();
-        System.out.println(var.getData());
+        tree.insertValue(56);
+        tree.insertValue(10);
+        tree.insertValue(54);
+        tree.insertValue(53);
+        tree.insertValue(8);
+
+
+
+        System.out.println(tree.root.getRight().getLeft().getLeft().getData());
+        System.out.println(tree.root.getLeft().getLeft().getData());
     }
 }

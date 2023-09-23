@@ -1,23 +1,31 @@
 public class Tree {
     Node root;
+
     public void insertValue(int data){
-        if (root == null){
-            root = new Node(data);}
-        else{
-            Node newNode = new Node(data);
-            Node current = root;
-         /*   while (current!=null)
-                if (data > current.getData()) {
-                    current = current.getRight();}
-                else{
-                    current = current.getLeft();
-                }*/
-            if (data > current.getData()){
-                    current.setRight(newNode);}
-            else {
-                current.setLeft(newNode);}
+        Node newNode = new Node(data);
+        if (root== null){
+            root= newNode;
+            return;
+        }
+        Node current = root;
+        while (true){
+            if (data > current.getData()) {
+                if (current.getRight() == null) {
+                    current.setRight(newNode);
+                    return;
+                }
+                current = current.getRight();
+            }
+            else if (data < current.getData()) {
+                if (current.getLeft() == null) {
+                    current.setLeft(newNode);
+                    return;
+                }
+                current = current.getLeft();
+            }
         }
     }
+
 
     public int searchValue(int value) {
         return value;
