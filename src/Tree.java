@@ -31,8 +31,42 @@ public class Tree {
         return value;
     }
 
-    public int removeValue(int value){
-        return value;
+    public Node min(Node x) {
+        if (x == root){
+            x = root;
+        }
+        while(x.getLeft() != null){
+            x = x.getLeft();
+        }
+        return x;
+    }
+
+    public Node max(Node x) {
+        if (x == root){
+            x = root;
+        }
+        while (x.getRight() != null){
+            x = x.getRight();
+        }  
+        return x;
+        //talvez tenha problema no retorno ja que X é o nó e estamos interessados apenas no valor dado (atributo data)
+    }
+
+    public Node removeValue(Node x, int data){
+        if (x == root){
+            x = root;
+        }
+        if (x == null){
+            return x;
+        }
+        //se o valor for menor que o valor do nó que está olhando, vai descer a esquerda e substituir todos que estão
+        //a esquerda pelo retorno desta função tentando remover este mesmo valor do nó a esquerda e faz o mesmo a direita
+        if (data < x.getData()){
+            x.setLeft(removeValue(x.getLeft(), data));
+        } else if (data > x.getData()){
+            x.setRight(removeValue(x.getRight(), data));
+        }
+        return x;
     }
 
 
