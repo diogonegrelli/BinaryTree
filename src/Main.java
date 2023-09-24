@@ -9,16 +9,18 @@ public class Main {
         tree.insertValue(12);
         tree.insertValue(56);
         tree.insertValue(10);
+        tree.insertValue(7);
+        tree.insertValue(11);        
         tree.insertValue(54);
         tree.insertValue(53);
+        tree.insertValue(55);
         tree.insertValue(8);
-        tree.searchValue();
 
-
-        System.out.println(tree.root.getRight().getLeft().getLeft().getData());
-        System.out.println(tree.root.getLeft().getLeft().getData());
+        //System.out.println(tree.root.getRight().getLeft().getLeft().getData());
+        //System.out.println(tree.root.getLeft().getLeft().getData());
         
-        tree.removeValue(tree.root.getRight(), 54);
+        tree.removeValue(tree.root, 10);
         System.out.println(tree.root.getRight().getLeft().getData());
+        tree.searchValue();
     }
 }

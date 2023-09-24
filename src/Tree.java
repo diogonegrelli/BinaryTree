@@ -80,16 +80,15 @@ public class Tree {
             x = root;
         }
         if (x == null){
+            System.out.println("Valor " + data + " não encontrado na árvore!");
             return x;
         }
-        //se o valor for menor que o valor do nó que está olhando, vai descer a esquerda e substituir todos que estão
-        //a esquerda pelo retorno desta função tentando remover este mesmo valor do nó a esquerda e faz o mesmo a direita
         if (data < x.getData()){
-            x.setLeft(removeValue(x.getLeft(), data));//set por que está sendo atualizado a referencia do pai do nó
+            x.setLeft(removeValue(x.getLeft(), data));
         } else if (data > x.getData()){
             x.setRight(removeValue(x.getRight(), data));
-        }
-        else{
+        }else{
+            System.out.println("Valor " + data + " removido da árvore.");
             if (x.getLeft() == null){
                 return x.getRight();
             }
