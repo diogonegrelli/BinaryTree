@@ -17,5 +17,8 @@ public class Main {
 
         System.out.println(tree.root.getRight().getLeft().getLeft().getData());
         System.out.println(tree.root.getLeft().getLeft().getData());
+        
+        tree.removeValue(tree.root.getRight(), 54);
+        System.out.println(tree.root.getRight().getLeft().getData());
     }
 }

@@ -62,11 +62,24 @@ public class Tree {
         //se o valor for menor que o valor do nó que está olhando, vai descer a esquerda e substituir todos que estão
         //a esquerda pelo retorno desta função tentando remover este mesmo valor do nó a esquerda e faz o mesmo a direita
         if (data < x.getData()){
-            x.setLeft(removeValue(x.getLeft(), data));
+            x.setLeft(removeValue(x.getLeft(), data));//set por que está sendo atualizado a referencia do pai do nó
         } else if (data > x.getData()){
             x.setRight(removeValue(x.getRight(), data));
         }
+        else{
+            if (x.getLeft() == null){
+                return x.getRight();
+            }
+            else if (x.getRight() == null)
+                return x.getLeft();
+            else{
+                Node sub = min(x.getRight());
+                x.setData(sub.getData());
+                x.setRight(removeValue(x.getRight(), sub.getData()));                 
+            }
+        }
         return x;
+
     }
 
 
