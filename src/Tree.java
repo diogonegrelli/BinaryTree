@@ -97,7 +97,6 @@ public class Tree {
             else{
                 Node sub = min(x.getRight());
                 x.setData(sub.getData());
-                x.setRight(removeValue(x.getRight(), sub.getData()));                 
             }
         }
         return x;
@@ -105,6 +104,16 @@ public class Tree {
     }
 
 
-    public void printTree(){
+    public void printTree() {
+        printTree(root, "", false);
+    }
+
+    private void printTree(Node node, String prefix, boolean isLeft) {
+        if (node != null) {
+            System.out.println(prefix + (isLeft ? "├── " : "└── ") + node.getData());
+            printTree(node.getLeft(), prefix + (isLeft ? "│   " : "    "), true);
+            printTree(node.getRight(), prefix + (isLeft ? "│   " : "    "), false);
+        }
     }
 }
+

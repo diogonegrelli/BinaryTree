@@ -16,11 +16,10 @@ public class Main {
         tree.insertValue(55);
         tree.insertValue(8);
 
-        //System.out.println(tree.root.getRight().getLeft().getLeft().getData());
-        //System.out.println(tree.root.getLeft().getLeft().getData());
-        
+        tree.printTree();
         tree.removeValue(tree.root, 10);
-        System.out.println(tree.root.getRight().getLeft().getData());
+        tree.printTree();
         tree.searchValue();
+
     }
 }
