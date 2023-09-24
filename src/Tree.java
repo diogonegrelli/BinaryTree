@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Tree {
     Node root;
 
@@ -27,8 +29,29 @@ public class Tree {
     }
 
 
-    public int searchValue(int value) {
-        return value;
+    public void searchValue() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Digite o valor a ser pesquisado na árvore: ");
+        int value = scanner.nextInt();
+        scanner.close();
+        boolean valueFound = searchRecursive(root, value);
+
+        if (valueFound){
+            System.out.println("Valor "+value+" encontrado na árvore");
+        }else {
+            System.out.println("Valor "+value+" não encontrado na árvore!");
+        }
+    }
+
+    private boolean searchRecursive(Node node, int targetValue){
+        if (node == null) {return false;}
+        if (targetValue == node.getData()) {
+            return true;
+        } else if (targetValue < node.getData()) {
+            return searchRecursive(node.getLeft(), targetValue);
+        } else {
+            return searchRecursive(node.getRight(), targetValue);
+        }
     }
 
     public Node min(Node x) {

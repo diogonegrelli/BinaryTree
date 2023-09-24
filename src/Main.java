@@ -12,7 +12,7 @@ public class Main {
         tree.insertValue(54);
         tree.insertValue(53);
         tree.insertValue(8);
-
+        tree.searchValue();
 
 
         System.out.println(tree.root.getRight().getLeft().getLeft().getData());
