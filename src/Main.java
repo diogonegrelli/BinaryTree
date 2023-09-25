@@ -6,7 +6,7 @@ public class Main {
         Tree tree = new Tree();
 
 
-        tree.insertValue(12);
+        tree.insertValue(53);
         tree.insertValue(56);
         tree.insertValue(10);
         tree.insertValue(7);
@@ -15,10 +15,9 @@ public class Main {
         tree.insertValue(53);
         tree.insertValue(55);
         tree.insertValue(8);
-
-        tree.printTree();
-        tree.removeValue(tree.root, 10);
-        tree.printTree();
+        
+        tree.removeValue(tree.root, 53);
+        tree.removeAndPrint(53);
         tree.searchValue();
 
     }

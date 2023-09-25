@@ -72,7 +72,7 @@ public class Tree {
             x = x.getRight();
         }  
         return x;
-        //talvez tenha problema no retorno ja que X é o nó e estamos interessados apenas no valor dado (atributo data)
+       
     }
 
     public Node removeValue(Node x, int data){
@@ -102,6 +102,10 @@ public class Tree {
         }
         return x;
 
+    }
+    public void removeAndPrint(int data) {
+        root = removeValue(root, data);
+        System.out.println("Raiz da árvore após a remoção: " + root.getData());
     }
 
 
