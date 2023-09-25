@@ -5,19 +5,19 @@ public class Main {
 
         Tree tree = new Tree();
 
+
         tree.insertValue(12);
         tree.insertValue(56);
         tree.insertValue(10);
         tree.insertValue(7);
-        tree.insertValue(12);
-        tree.insertValue(54);        
+        tree.insertValue(11);        
+        tree.insertValue(54);
         tree.insertValue(53);
         tree.insertValue(55);
         tree.insertValue(8);
-        tree.insertValue(12);
+
         tree.printTree();
-        tree.removeValue(tree.root, 56);
-        tree.removeAndPrint(56);
+        tree.removeAndPrint( 10);
         tree.printTree();
         tree.searchValue();
 
