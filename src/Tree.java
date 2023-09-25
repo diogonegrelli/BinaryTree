@@ -64,17 +64,6 @@ public class Tree {
         return x;
     }
 
-    public Node max(Node x) {
-        if (x == root){
-            x = root;
-        }
-        while (x.getRight() != null){
-            x = x.getRight();
-        }  
-        return x;
-       
-    }
-
     public Node removeValue(Node x, int data){
         if (x == root){
             x = root;
@@ -88,7 +77,6 @@ public class Tree {
         } else if (data > x.getData()){
             x.setRight(removeValue(x.getRight(), data));
         }else{
-            System.out.println("Valor " + data + " removido da árvore.");
             if (x.getLeft() == null){
                 return x.getRight();
             }
@@ -105,6 +93,7 @@ public class Tree {
     }
     public void removeAndPrint(int data) {
         root = removeValue(root, data);
+        System.out.println("Valor " + data + " removido com sucesso!");
         System.out.println("Raiz da árvore após a remoção: " + root.getData());
     }
 
