@@ -14,7 +14,7 @@ possui chamada para outra função recursiva de busca: searchRecursive():
 
 4. Todos os métodos utilizam recursão, com exceção da inserção que implementa um loop While.
 
-5. A remoção trata os seguinte casos para o nó a ser removido:
+5. A remoção trata os seguintes casos para o nó a ser removido:
        1- Nó folha.
        2 - Nó com um filho.
        3 - Nó com 2 filhos.
