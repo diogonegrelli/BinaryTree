@@ -55,9 +55,6 @@ public class Tree {
     }
 
     public Node min(Node x) {
-        if (x == root){
-            x = root;
-        }
         while(x.getLeft() != null){
             x = x.getLeft();
         }
@@ -65,18 +62,17 @@ public class Tree {
     }
 
     public Node removeValue(Node x, int data){
-        if (x == root){
-            x = root;
-        }
         if (x == null){
             System.out.println("Valor " + data + " não encontrado na árvore!");
             return x;
         }
+        boolean removed = false;
         if (data < x.getData()){
             x.setLeft(removeValue(x.getLeft(), data));
         } else if (data > x.getData()){
             x.setRight(removeValue(x.getRight(), data));
         }else{
+        System.out.println("Valor " + data + " removido com sucesso!");
             if (x.getLeft() == null){
                 return x.getRight();
             }
@@ -88,15 +84,12 @@ public class Tree {
                 x.setRight(removeValue(x.getRight(), sub.getData()));
             }
         }
+        if (removed != true) {
+            System.out.println("Raiz da árvore após a remoção: " + root.getData());
+        }
         return x;
 
     }
-    public void removeAndPrint(int data) {
-        root = removeValue(root, data);
-        System.out.println("Valor " + data + " removido com sucesso!");
-        System.out.println("Raiz da árvore após a remoção: " + root.getData());
-    }
-
 
     public void printTree() {
         printTree(root, "", false);

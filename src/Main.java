@@ -5,11 +5,16 @@ public class Main {
 
         Tree tree = new Tree();
 
+<<<<<<< Updated upstream
 
-        tree.insertValue(12);
+=======
+>>>>>>> Stashed changes
+        tree.insertValue(13);
         tree.insertValue(56);
         tree.insertValue(10);
         tree.insertValue(7);
+        tree.insertValue(11);
+        tree.insertValue(54);        
         tree.insertValue(11);        
         tree.insertValue(54);
         tree.insertValue(53);
@@ -17,7 +22,7 @@ public class Main {
         tree.insertValue(8);
 
         tree.printTree();
-        tree.removeAndPrint( 10);
+        tree.removeValue(tree.root, 54);
         tree.printTree();
         tree.searchValue();
 
