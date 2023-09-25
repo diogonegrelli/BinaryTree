@@ -1,7 +1,6 @@
-Pontifícia Universidade Católica do Paraná - Engenharia de Software
-Resolução de Problemas Estruturados em Computação
-Prof Marina de Lara
-PJBL2 - Árvore Binária de Busca
+Pontifícia Universidade Católica do Paraná -- Engenharia de Software
+Resolução de Problemas Estruturados em Computação -- Prof Marina de Lara
+PJBL2 -- Árvore Binária de Busca --
 Diogo Negrelli, Gabriel Ribeiro, José Mussy.
 
 
@@ -16,9 +15,9 @@ possui chamada para outra função recursiva de busca: searchRecursive():
 4. Todos os métodos utilizam recursão, com exceção da inserção que implementa um loop While.
 
 5. A remoção trata os seguinte casos para o nó a ser removido:
-       1- Nó folha
-       2 - Nó com um filho
-       3 - Nó com 2 filhos
+       1- Nó folha.
+       2 - Nó com um filho.
+       3 - Nó com 2 filhos.
        No caso de nó com 2 filhos, ele se utiliza do método min(); que serve para encontrar
        o menor valor a direita do nó que será removido para realizar a susbtituição. 
 
