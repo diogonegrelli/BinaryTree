@@ -5,10 +5,6 @@ public class Main {
 
         Tree tree = new Tree();
 
-<<<<<<< Updated upstream
-
-=======
->>>>>>> Stashed changes
         tree.insertValue(13);
         tree.insertValue(56);
         tree.insertValue(10);
