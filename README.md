@@ -20,6 +20,6 @@ possui chamada para outra função recursiva de busca: searchRecursive():
        3 - Nó com 2 filhos.
        No caso de nó com 2 filhos, ele se utiliza do método min(); que serve para encontrar
        o menor valor a direita do nó que será removido para realizar a susbtituição. 
-[PJBL 2](Images/img.png)
+
 
 
