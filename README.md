@@ -1,5 +1,5 @@
 Pontifícia Universidade Católica do Paraná -- Engenharia de Software --
-Resolução de Problemas Estruturados em Computação -- Prof Marina de Lara
+Resolução de Problemas Estruturados em Computação -- Prof Marina de Lara --
 PJBL2 -- Árvore Binária de Busca --
 Diogo Negrelli, Gabriel Ribeiro, José Mussy.
 
