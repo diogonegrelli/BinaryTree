@@ -12,13 +12,13 @@ public class Main {
         tree.insertValue(11);
         tree.insertValue(54);        
         tree.insertValue(11);        
-        tree.insertValue(54);
+        tree.insertValue(52);
         tree.insertValue(53);
         tree.insertValue(55);
         tree.insertValue(8);
 
         tree.printTree();
-        tree.removeValue(tree.root, 54);
+        tree.removeValue(tree.root, 13);
         tree.printTree();
         tree.searchValue();
 
