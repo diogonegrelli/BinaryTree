@@ -11,7 +11,7 @@ public class Tree {
         }
         Node current = root;
         while (true){
-            if (data > current.getData()) {
+            if (data >= current.getData()) {
                 if (current.getRight() == null) {
                     current.setRight(newNode);
                     return;
@@ -97,6 +97,7 @@ public class Tree {
             else{
                 Node sub = min(x.getRight());
                 x.setData(sub.getData());
+                x.setRight(removeValue(x.getRight(), sub.getData()));
             }
         }
         return x;
